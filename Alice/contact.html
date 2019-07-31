@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contáctanos!</title>
+    <link rel="stylesheet" href="../css/Alice.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/efectos.css">
+    <link rel="stylesheet" href="../footer/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../footer/Bootstrap/css/bootstrap-grid.min.css.map">
+    <link rel="stylesheet" href="../footer/Bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../footer/Bootstrap/css/bootstrap-reboot.min.css.map">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/efectos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+</head>
+<body>
+        <div class="menu">
+                <div class="menu_bar" >
+                    <img id="menu" id="cambio" src="../img/jico.jpg" alt="">
+                </div>
+            
+                <nav id="nav1">
+                    <ul>
+                        <li class="scale"><a href="inicio.html">Inicio</a></li>
+                        <li class="scale1"><a href="alicia2/efectos.html">Planes</a></li>
+                        <li class="scale"><a href="contact.htm">Contacto</a></li>
+                    </ul>
+                </nav>
+        </div>
+    <script>
+        //Menu Ocultable
+    $('#nav1').fadeOut(0)
+    $('#menu').fadeOut(0)
+    
+    $('#menu').fadeIn(2000)
+    
+    $(document).ready(main);
+    var contador = 1;
+    
+    function main(){
+        $('#menu').click(function(){
+            if(contador == 1){
+                $('#nav1').fadeIn(4000);
+                contador = 0;
+            }else{
+                contador = 1;
+                $('#nav1').fadeOut(4000)
+            }
+        })
+    }
+    </script>
+<!--Section heading-->
+    <div class="mx-auto col-md-7 mb-md-3 mb-3">
+        <h2 class="h1-responsive text-center my-4">Contáctanos</h2>
+        <!--Section description-->
+        <h3 class="h3-responsive text-center mx-auto mb-5">¿Tienes alguna pregunta?.Escribenos directamente, nuestro equipo
+            trabajará para responderte en cuestión de horas</h3>
+    </div>
+    <div class="row">
+        <!--Grid column-->
+        <div class="mx-auto col-md-7 mb-md-3 mb-3">
+            <form id="contact-form" name="contact-form" method="POST">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <label for="name" class=""><h3>Nombre</h3></label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control" required>
+                            <label for="email" class=""><h3>Correo</h3></label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                            <label for="subject" class=""><h3>Asunto</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
+                            <label for="message"><h3>Tu mensaje</h3></label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-purple" onclick="validateForm()"><h3>Enviar</h3></a>
+            </div>
+            <div class="status"><p id="status" style="font-family: Wonderland; color: red"></p></div>
+        </div>
+        <!--Grid column-->
+    </div>
+
+        <!--Footer-->
+
+<footer class="page-footer font-small special-color-dark pt-4">
+
+        <!-- Footer Elements -->
+        <div class="container">
+      
+          <!-- Social buttons -->
+          <ul class="list-unstyled list-inline text-center">
+    
+            <!-- FACEBOOK -->
+            <li class="list-inline-item">
+            <a href=""><img src="../footer/imagenes/facebook.png" alt=""></a>
+              
+            </li>
+    
+            <!-- INSTAGRAM -->
+            <li class="list-inline-item">
+            <a href="https://www.instagram.com/explore/tags/aliciainwonderland/" target="blank_"><img src="../footer/imagenes/instagram.png" alt=""></a>        
+            </li>
+    
+            <!-- TWITTER -->
+            <li class="list-inline-item">
+              <a href="https://twitter.com/thebestbutter" target="blank_"><img src="../footer/imagenes/twitter.png" alt=""></a>
+            </li>
+    
+            <!-- YOUTUBE -->
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/watch?v=KZiYYflms-w" target="blank_"><img src="../footer/imagenes/youtube.png" alt=""></a>
+            </li>
+    
+            <!-- PINTEREST -->
+            <li class="list-inline-item">
+            <a href="https://co.pinterest.com/search/pins/?rs=ac&len=2&q=alice%20in%20wonderland%20tematic&eq=alice%20in&etslf=6850&term_meta[]=alice%20in%20wonderland%20tematic%7Cautocomplete%7C3"><img src="../footer/imagenes/pinterest.png" alt=""></a> 
+            </li>
+            
+          </ul>
+          <!-- Social buttons -->
+      
+        </div>
+        <!-- Footer Elements -->
+      
+    
+    
+    
+    
+        <!-- Copyright -->
+        <div id="copyright" style="color: grey;" class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="">www.Aliciainwonderland.com</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+      <!-- Footer -->
+      
+    
+    
+    
+    
+    
+    
+      <script>
+    
+    $(document).ready(function(){
+      $(".btn1").click(function(){
+        $("p").fadeOut();
+      });
+      $(".btn2").click(function(){
+        $("p").fadeIn();
+      });
+    });
+    
+      </script>
+    
+    
+</body>
+<script src="js/mdb.js"></script>
+<script src="js/contact.js"></script>
+</html>

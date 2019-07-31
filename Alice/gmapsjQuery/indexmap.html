@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Change a map's style</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/jquery.gmaps.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .gmaps {
+            overflow: hidden;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 500px;
+            height: 500px;
+        }
+
+        #menu {
+            position: absolute;
+            background: #fff;
+            padding: 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .marker {
+            background-image: url("imag6.jpg")
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='map'></div>
+    <div id='menu'>
+
+        <input id='dark-v10' type='radio' name='rtoggle' value='dark' checked='checked'>
+        <label for='dark'>dark</label>
+
+    </div>
+
+    <script>
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY2xpY2tqdWFuc2l0byIsImEiOiJjanlscGh6YzkwYXdwM210OHg5MG1pYWllIn0.-GjmRqYhPrgqZszPiP5C9Q';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            zoom: 7,
+            center: [4.899, 52.372]
+        });
+
+        let element = document.createElement('div')
+        element.className='maerker'
+
+        let marker = new mapboxgl.Marker(element).setLngLat([ lng: 4.899, lat: 52.372])
+
+
+
+
+        // let marker = new mapboxgl.Marker(element)
+        //     .setLngLat({
+        //         lng: 4.899,
+        //         lat: 52.372
+        //     })
+
+
+            // .addTo(map)
+
+
+
+
+
+
+        var layerList = document.getElementById('menu');
+        var inputs = layerList.getElementsByTagName('input');
+        function switchLayer(layer) {
+            var layerId = layer.target.id;
+            map.setStyle('mapbox://styles/mapbox/' + layerId);
+        }
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].onclick = switchLayer;
+        }
+
+        let element = document.createElement('div')
+        element.className = 'marker'
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+
+    </style>
+
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY2xpY2tqdWFuc2l0byIsImEiOiJjanlscGh6YzkwYXdwM210OHg5MG1pYWllIn0.-GjmRqYhPrgqZszPiP5C9Q';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+        });
+
+    </script>
+
+
+</body>
+
+</html> -->

@@ -1,0 +1,310 @@
+body {
+    background-color: rgb(130, 189, 228);
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.contenedor {
+    width: 95%;
+    height: auto;
+    background-color: rgba(37, 37, 39, 0.295);
+    margin: 2.5%;
+}
+
+.contenedorDeImagenes {
+    width: 30%;
+    height: 400px;
+    background-color: #E5E5E5;
+    display: inline-block;
+    margin: 1.5%;
+    border-radius: 5px 10px;
+}
+
+.margenContenedor {
+    margin-left: 20%;
+}
+
+.tituloPrincipal {
+    font-family: 'wonderland';
+    font-size: 90px;
+    text-align: center;
+    -webkit-text-stroke: .1px rgb(0, 0, 0);
+    color: rgb(227, 169, 130);
+}
+
+.subtitulo {
+    font-family: 'wonderland';
+    font-size: 60px;
+    text-align: center;
+    margin: 0px
+}
+
+/*ContenedorDeImagenes*/
+.tituloPlan {
+    font-family: 'cafe';
+    font-size: 50px;
+    margin: 8px 0px;
+    text-align: center;
+    color: rgb(101, 192, 89);
+    -webkit-text-stroke: .1px rgb(44, 28, 28);
+
+
+}
+
+.imagenPlan {
+    width: 90%;
+    height: 300px;
+    margin-top: -303px;
+    margin-left: 4.5%;
+    float: left;
+    clip-path: inset(0 0 0 0);
+}
+
+.informacionDePlan {
+    width: 90%;
+    height: 300px;
+    margin: 1% 4.5%;
+    background-color: rgb(230, 150, 189);
+}
+
+.informacionOpciones {
+    padding: 0;
+    margin: 3.5%;
+    font-family: 'cafe';
+    font-size: 30px;
+    text-align: center;
+}
+
+.botonInformacion {
+    display: inline-flex;
+    border: solid 2px orange;
+    background-color: pink;
+    text-align: center;
+    padding: 5px;
+    margin: -4px 27%;
+}
+
+
+
+/*ImagenesDeServicios*/
+.imagenServicios {
+    width: 7%;
+    height: 73px;
+    margin: 1%;
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+    top: -95px;
+}
+
+.imagenServiciosMargen {
+    margin-left: 25%;
+}
+
+.contenidoDeServicios {
+    width: 7%;
+    height: 68px;
+    margin: 1%;
+    clip-path: circle(50% at 50% 50%);
+    background-color: #E5E5E5;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.contenidoDeServiciosMargen {
+    margin-left: 25%;
+}
+
+.contenidoDeServicios>.serviciosTexto {
+    margin-top: 18px;
+}
+
+/*********POP UP*********/
+
+.popUpEfecto {
+    background-color: rgba(255, 255, 255, 0.281);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    display: flex;
+}
+
+.popUp {
+    width: 80%;
+    height: 440px;
+    background-color: rgb(14, 14, 13);
+    border: solid 5px rgba(83, 45, 109, 0.815);
+    margin: 10%;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.popUpImagen {
+    width: 40%;
+    height: 400px;
+    margin: 2% 1% 1.5% 5%;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.popUpInformacion {
+    width: 47%;
+    height: 400px;
+    background-color: rgba(22, 21, 21, 0.719);
+    position: relative;
+    float: right;
+    top: 5%;
+    right: 4%;
+
+}
+
+.popUpTitulo {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: 'wonderland';
+    font-size: 60px;
+    color: rgb(163, 106, 106);
+}
+
+.popUpCaracteristicas {
+    color: rgb(163, 106, 106);
+    margin: 4%;
+}
+
+.botonSalir {
+    position: fixed;
+    right: 35%;
+    text-align: center;
+    border: solid 2px peru;
+    padding: 5px;
+    width: 7%;
+    font-size: 20px;
+    background-color: rgba(214, 29, 29, 0.877);
+    border-radius: 50%
+}
+
+.desactivar {
+    opacity: 0;
+    width: 0%;
+    height: 0px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.activar {
+    opacity: 1;
+}
+
+.popUpCaracteristicas>.opciones {
+    text-align: center;
+}
+
+/*********COMPRA***************/
+table {
+    width: 80%;
+    height: 300px;
+    margin: 4% 10% 1% 10%;
+    font-size: 18px;
+    color: white;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 4px;
+    border: solid 2px purple;
+}
+
+.tabla1 {
+    background-color: rgb(114, 114, 216);
+}
+
+.tabla2 {
+    background-color: rgb(204, 114, 216);
+    color: black;
+}
+
+.botonSalir2 {
+    position: fixed;
+    left: 40%;
+    text-align: center;
+    border: solid 2px peru;
+    padding: 6px;
+    width: 7%;
+    font-size: 20px;
+    background-color: rgba(214, 29, 29, 0.877);
+    border-radius: 50%
+}
+
+.botonComprar {
+    position: fixed;
+    right: 20%;
+    text-align: center;
+    border: solid 2px peru;
+    padding: 5px;
+    width: 7%;
+    font-size: 20px;
+    background-color: rgb(84, 214, 57);
+    border-radius: 50%
+}
+
+.botonComprar2 {
+    position: fixed;
+    right: 35%;
+    text-align: center;
+    border: solid 2px peru;
+    padding: 5px;
+    width: 7%;
+    font-size: 20px;
+    background-color: rgb(84, 214, 57);
+    border-radius: 50%
+}
+
+/************PARA COMPRAR**********/
+.cajaComprar {
+    width: 80%;
+    height: 460px;
+    background-color: rgb(91, 92, 31);
+    margin: 5% 10% 1% 10%;
+    border-radius: 20% 2%;
+}
+
+.popUp1 {
+    width: 80%;
+    height: 600px;
+    background-color: rgb(14, 14, 13);
+    border: solid 5px rgba(83, 45, 109, 0.815);
+    margin: 10%;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.tablaComprar {
+    height: 200px;
+    position: relative;
+    left: 2px;
+}
+
+.subtitulo1 {
+    font-family: 'wonderland';
+    font-size: 60px;
+    text-align: center;
+    margin: 1% 4%;
+
+}
+
+/***********************************************/
+@font-face {
+    font-family: 'wonderland';
+    src: url(../fuente/Wonderland.ttf);
+}
+
+@font-face {
+    font-family: 'cafe';
+    src: url(../fuente/cafe.ttf);
+}

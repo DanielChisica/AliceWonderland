@@ -1,0 +1,229 @@
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+@font-face{src: url(../fonts/KR\ Mad\ Tea\ Party.ttf);
+    font-family: "Teaparty"
+    }
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    }
+
+
+    
+    #body{
+        background-color:  white ; 
+        background-size: 1360px 680px;
+        
+    }
+     
+    
+     
+    .menu_bar {
+    display: block;
+    margin: 15px;
+    width: 100px;
+    }
+    #menu{
+        width: 50px;
+        height: 70px;
+        /* border: 2px solid black; */
+    }
+    .menu {
+    width: 250px;
+    position: fixed;
+    z-index: 10;
+
+
+    }
+     
+    .menu nav {
+    background:transparent;
+    z-index:10;
+    max-width: 1000px;
+    width:250px;
+    margin:15px;
+    }
+     
+    .menu nav ul {
+    list-style:none;
+    }
+     
+    .menu nav ul li {
+    display:block;
+    position: relative;
+    margin-bottom: 10px;
+
+    /* background-color: transparent; */
+    /* border: 2px solid black; */
+    border-radius: 40px;        
+    }
+    
+    .menu nav ul li:hover {
+    transform: scale(1.1);
+    }
+    #menu:hover{
+        transform: scale(1.2);
+    }
+
+    .menu nav ul li a {
+    color: black;
+    display:block;
+    text-decoration:none;
+    padding: 20px;
+    margin-left: 30px;
+    }
+     
+    .menu nav ul li a span {
+    margin-right:10px;
+    }
+     
+    .menu nav ul li:hover .children {
+    display:block;
+    }
+     
+    .menu nav ul li .children {
+    display: none;
+    background:#011826;
+    position: absolute;
+    width: 150%;
+    z-index:10;
+    }
+     
+    .menu nav ul li .children li {
+    display:block;
+    }
+     
+    .menu nav ul li .children li a {
+    display: block;
+    }
+
+    header img{
+        width: 100%;
+    }
+    
+/*Estilos FOOTER*/
+
+footer img{
+    height: 40px;
+    width: 40px;
+}
+
+
+footer{
+    background-color: #263237;
+}
+
+#copyright{
+    background-color: #1D282D;
+}
+
+
+
+
+
+
+
+
+
+/* ESTILOS HEADER */
+
+header{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+ 
+
+
+
+header > h1{
+    font-size: 120px;
+    font-family: Teaparty;
+    line-height:  100px;
+}
+
+
+
+
+#letra1{
+    color: #033A63;
+    font-weight: normal;
+    width: 100%;
+}
+
+
+
+
+#letra2{
+    font-weight: normal;
+    width: 100%;
+    color: #084C61;
+}
+
+
+
+#letra3{
+    font-weight: normal;
+    color: #177E89;
+}
+
+
+
+.scale{
+    background-color: transparent;
+    background-image: url(../img/bck2.png);
+    background-size: 250px 60px;
+    
+}
+.scale1{
+    background-color: transparent;
+    background-image: url(../img/bck2.png);
+    background-size: 250px 60px;
+    
+}
+
+
+    
+/* PRIMER TITULO */
+
+#primertitulo{
+    
+    
+    height: auto;
+    width: 100%;
+    border: 2px solid black;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#primertitulo #titulo1{
+    font-size: 80px
+}
+
+#primertitulo #botones{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 7%;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+#titulito{
+    text-align: center;
+    margin-bottom: -415px;
+}
+
+

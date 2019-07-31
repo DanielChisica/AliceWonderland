@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <title>Efectos de Alicia</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/efectos.css">
+    <link rel="" href="../">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/efectos.js"></script>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 500px;
+        }
+
+        .marker {
+            background-size: cover;
+            display: block;
+            border: none;
+            border-radius: 10%;
+            cursor: pointer;
+            padding: 0;
+        }
+    </style>
+</head>
+<div class="menu">
+    <nav id="nav1">
+        <ul>
+            <li class="scale"><a href="efectos.html">Inicio</a></li>
+            <li class="scale1"><a href="Planes.html">Planes</a></li>
+            <li class="scale"><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+</div>
+<script>
+    //Menu Ocultable
+    $('#nav1').fadeOut(0)
+    $('#menu').fadeOut(0)
+
+    $('#menu').fadeIn(5000)
+
+    $(document).ready(main);
+    var contador = 1;
+
+    function main(){
+        $('#menu').click(function(){
+            if(contador == 1){
+                $('#nav1').fadeIn(4000);
+                contador = 0;
+            }else{
+                contador = 1;
+                $('#nav1').fadeOut(4000)
+            }
+        })
+    }
+</script>
+<body id="cuerpo">
+
+    <h1 class="tituloPrincipal">Viajes Wonderland</h1>
+    <div class="contenedor"><br>
+
+        <h2 class="subtitulo"> Planes Drink Me</h2>
+        <div class="contenedorDeImagenes margenContenedor">
+            <h1 class="tituloPlan">Jardin</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 4 semanas.</h3>
+                <h3 class="informacionOpciones">* Recorridos Nocturnos.</h3>
+                <h3 class="informacionOpciones">* Ecoturismo extra-pronir.</h3>
+                <h4 class="botonInformacion" id="boton1">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" src="multimedia/jardin.jpg" alt="Jardin">
+        </div>
+
+        <div class="contenedorDeImagenes">
+            <h1 class="tituloPlan">Conejo-N</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 4 semana.</h3>
+                <h3 class="informacionOpciones">* Tour tematico.</h3>
+                <h3 class="informacionOpciones">* Actividades de Gravedad.</h3>
+                <h4 class="botonInformacion" id="boton2">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" src="multimedia/conejoHome.jpg" alt="Conejo-N">
+        </div>
+
+        <div class="contenedorDeImagenes">
+            <h1 class="tituloPlan">Lagrimas</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 3 semanas.</h3>
+                <h3 class="informacionOpciones">* Atracciones en canoa.</h3>
+                <h3 class="informacionOpciones">* Astrologia blur.</h3>
+                <h4 class="botonInformacion" id="boton3">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" src="multimedia/mar.jpg" alt="Lagrimas">
+        </div>
+
+        <div class="contenedorDeImagenes">
+            <h1 class="tituloPlan">Oruga</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 4 semanas.</h3>
+                <h3 class="informacionOpciones">* Plantenix.</h3>
+                <h3 class="informacionOpciones">* Ecoturismo conciencia.</h3>
+                <h4 class="botonInformacion" id="boton4">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" src="multimedia/oruga.jpg" alt="Oruga">
+        </div>
+
+        <div class="contenedorDeImagenes">
+            <h1 class="tituloPlan">T&T</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 5 semanas.</h3>
+                <h3 class="informacionOpciones">* Dos mundos.</h3>
+                <h3 class="informacionOpciones">* Recorridos a través del tiempo.</h3>
+                <h4 class="botonInformacion" id="boton5">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" id="imagen4" src="multimedia/gemelos.jpg" alt="T&T">
+        </div><br><br>
+        <h2 class="subtitulo"> Planes Eat Me</h2>
+
+        <div class="contenedorDeImagenes">
+            <h1 class="tituloPlan">Pantano</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 4 días.</h3>
+                <h3 class="informacionOpciones">* Acampados nocturnos.</h3>
+                <h3 class="informacionOpciones">* Pro-Botanica.</h3>
+                <h4 class="botonInformacion" id="boton6">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" src="multimedia/jardin2.jpg" alt="conejoHome">
+        </div>
+
+        <div class="contenedorDeImagenes">
+            <h1 class="tituloPlan">¿Tranquilo?</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 2 días.</h3>
+                <h3 class="informacionOpciones">* Escalada en Roca.</h3>
+                <h3 class="informacionOpciones">* Ciclismo a todo terreno.</h3>
+                <h4 class="botonInformacion" id="boton7">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" src="multimedia/jardin1.jpg" alt="conejoHome">
+        </div>
+
+        <div class="contenedorDeImagenes">
+            <h1 class="tituloPlan">Dimensiones</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 3 días.</h3>
+                <h3 class="informacionOpciones">* Paracaidismo.</h3>
+                <h3 class="informacionOpciones">* Flyboarder Experience.</h3>
+                <h4 class="botonInformacion" id="boton8">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" src="multimedia/jardin3.jpg" alt="conejoHome">
+        </div>
+
+        <div class="contenedorDeImagenes">
+            <h1 class="tituloPlan">Ubuntu</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 4 días.</h3>
+                <h3 class="informacionOpciones">* Ilumitw-pol.</h3>
+                <h3 class="informacionOpciones">* Rafting.</h3>
+                <h4 class="botonInformacion" id="boton9">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" src="multimedia/jardin4.jpg" alt="conejoHome">
+        </div>
+
+        <div class="contenedorDeImagenes">
+            <h1 class="tituloPlan">Zulu</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 1 día.</h3>
+                <h3 class="informacionOpciones">* Recorrido silen-creep.</h3>
+                <h3 class="informacionOpciones">* Ecoturismo live.</h3>
+                <h4 class="botonInformacion" id="boton10">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" src="multimedia/jardin5.jpg" alt="conejoHome">
+        </div>
+
+        <div class="contenedorDeImagenes">
+            <h1 class="tituloPlan">Baha-í</h1>
+            <div class="informacionDePlan"><br>
+                <h3 class="informacionOpciones">* 3 días.</h3>
+                <h3 class="informacionOpciones">* Acampado en playa.</h3>
+                <h3 class="informacionOpciones">* Recorrido silen-creep.</h3>
+                <h4 class="botonInformacion" id="boton11">MAS INFORMACION</h4>
+            </div>
+            <img class="imagenPlan" src="multimedia/paisaje6.jpg" alt="conejoHome">
+        </div>
+
+        <div class="contdmp">
+
+            <div id='map'></div>
+            <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoiY2xpY2tqdWFuc2l0byIsImEiOiJjanlscGh6YzkwYXdwM210OHg5MG1pYWllIn0.-GjmRqYhPrgqZszPiP5C9Q';
+
+                var geojson = {
+                    "type": "FeatureCollection",
+                    "features": [
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "message": "Plan Jardin \n 4 Semanas \n Recorrido nocturnos \n Ecoturismo extra",
+                                "iconSize": [70, 70]
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -70.324462890625,
+                                    -30.024695711685304
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "message": "4 semanas \n Tour tematico \n Actividades de Gravedad",
+                                "iconSize": [70, 70]
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -20.2158203125,
+                                    -17.97189158092897
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {
+                                "message": "3 semanas  \n atracciones en cocina \n Astrologia Blur",
+                                "iconSize": [70, 70]
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -50.29223632812499,
+                                    -18.28151823530889
+                                ]
+                            }
+                        }
+
+                    ]
+                };
+
+
+                var map = new mapboxgl.Map({
+                    container: 'map', // container id
+                    style: 'mapbox://styles/mapbox/dark-v10', //hosted style id
+                    center: [-65.017, -16.457], // starting position
+                    zoom: 2.5 // starting zoom
+                });
+
+
+                geojson.features.forEach(function (marker) {
+                    // create a DOM element for the marker
+                    var el = document.createElement('div');
+                    el.className = 'marker';
+                    el.style.backgroundImage = 'url("descarga2.jpg")';
+                    el.style.width = marker.properties.iconSize[0] + 'px';
+                    el.style.height = marker.properties.iconSize[1] + 'px';
+
+                    el.addEventListener('click', function () {
+                        window.alert(marker.properties.message);
+                    });
+
+                    // add marker to map
+                    new mapboxgl.Marker(el)
+                        .setLngLat(marker.geometry.coordinates)
+                        .addTo(map);
+                });
+            </script>
+
+        </div>
+
+        <div class="contenedorDeServicios"><br><br>
+            <h2 class="subtitulo">Todos Los planes Wonderland Incluyen</h2>
+            <div class="contenidoDeServicios contenidoDeServiciosMargen">
+                <p class="serviciosTexto">Hospedaje</p>
+            </div>
+
+            <div class="contenidoDeServicios">
+                <p class="serviciosTexto">Transporte</p>
+            </div>
+
+            <div class="contenidoDeServicios">
+                <p class="serviciosTexto">Salud</p>
+            </div>
+
+            <div class="contenidoDeServicios">
+                <p class="serviciosTexto">Internet</p>
+            </div>
+
+            <div class="contenidoDeServicios">
+                <p class="serviciosTexto">Comida</p>
+            </div>
+
+            <div class="contenidoDeServicios">
+                <p class="serviciosTexto">Tiquetes</p>
+            </div>
+
+            <img class="imagenServicios imagenServiciosMargen" src="multimedia/hotel.png" alt="hotel">
+            <img class="imagenServicios" src="multimedia/transporte.png" alt="transporte">
+            <img class="imagenServicios" src="multimedia/salud.png" alt="salud">
+            <img class="imagenServicios" src="multimedia/internet.png" alt="internet">
+            <img class="imagenServicios" src="multimedia/comida.png" alt="comida">
+            <img class="imagenServicios" src="multimedia/avion.png" alt="avion">
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp1">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/jardin.jpg" alt="Paquete Jardin">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">Jardin</h1>
+                    <p class="popUpCaracteristicas">
+                        Los amantes de la Opera ahora podran disfrutar de los 8 teatros que hay en el mundo
+                        Disney.<br><br>
+                        En plan Jardin de Flores encontrara<br><br>
+                        * Recorrido por cada tatro Disney<br>
+                        * Tour por El jardin de WONDERLAND<br>
+                    </p>
+                    <h1 class="botonSalir" id="salir1">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp2">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/conejoHome.jpg" alt="Paquete Conejo">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">Conejo-N</h1>
+                    <p class="popUpCaracteristicas">
+                        Una experiencia magnifica en la cual podra conocer la
+                        madriguera del conejo del país de las maravillas y la forma de entrada
+                        a este mundo.<br><br>
+                        En plan Conejo encontrara:<br><br>
+                        * 4 Puertas de entrada<br>
+                        * Recorrido Arbol<br>
+                        * Recorrido Huerto de conejo<br>
+                    </p>
+                    <h1 class="botonSalir" id="salir2">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp3">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/mar.jpg" alt="Paquete Mar/Lagrimas">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">Lagrimas</h1>
+                    <p class="popUpCaracteristicas">
+                        El mejor crucero para usted y toda su familia lo encuentra en WONDERLAND
+                        el crucero mas grande de todo el mundo Disney.<br><br>
+                        En plan Lagrimas encontrara:<br><br>
+                        * Recorrido por lago Alicia<br>
+                        * Actividades acuaticas<br>
+                    </p>
+                    <h1 class="botonSalir" id="salir3">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp4">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/oruga.jpg" alt="Paquete Oruga">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">Oruga</h1>
+                    <p class="popUpCaracteristicas">
+                        Las mejores vacaciones las brinda ORUGA en donde conoceras 3 lugares magnificos
+                        de WONDERLAND.<br><br>
+                        En plan Oruga encontrara:<br><br>
+                        * Visita al castillo de la Reina Roja<br>
+                        * Tour por el laberintol<br>
+                        * Tour por la Cena de Locos<br>
+                    </p>
+                    <h1 class="botonSalir" id="salir4">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp5">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/gemelos.jpg" alt="Paquete Gemelos">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">T&T</h1>
+                    <p class="popUpCaracteristicas">
+                        Un plan que le ofrece a usted y a su familia las actividades mas extremas
+                        de WONDERLAND.<br><br>
+                        En plan T&T encontrara:<br><br>
+                        * Tour por el mundo de las piezas de ajedre<br>
+                        * Visita al Rey Rojo<br>
+                        * Visita al castillo de la Reina Blanca<br>
+                    </p>
+                    <h1 class="botonSalir" id="salir5">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp6">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/jardin2.jpg" alt="Paquete Pantano">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">Pantano</h1>
+                    <p class="popUpCaracteristicas">
+                        Un plan que le ofrece a usted y a su familia conocer sobre la naturaleza y los
+                        recurso de naturales de nuestro planeta Tierra.<br><br>
+                        En plan Pantano encontrara:<br><br>
+                        * 3 Acampados nocturnos<br>
+                        * Acciones pro-Botanica<br>
+                        * Actividades para niños en Pro-Botanica con Kamilo Line<br>
+                    </p>
+                    <h1 class="botonSalir" id="salir6">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp7">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/jardin1.jpg" alt="Paquete Tranquilo">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">¿Tranquilo?</h1>
+                    <p class="popUpCaracteristicas">
+                        Si quieres vivir una experiencia de Spartanos , ven y vive un fin de semana
+                        unico con actividades extremas.<br><br>
+                        En plan ¿Tranquilo? encontrara:<br><br>
+                        * 2 montañas Disney para escalar <br>
+                        * Pistas del la reina Blanca para los amantes del ciclismo<br>
+                    </p>
+                    <h1 class="botonSalir" id="salir7">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp8">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/jardin3.jpg" alt="Paquete Dimensiones">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">Dimensiones</h1>
+                    <p class="popUpCaracteristicas">
+                        Para vivir una experiencia de locura Wonderland ofrece viajes
+                        a las dimensiones en las que viajan los personajes de Disney
+                        aparte de actividades aereas.<br><br>
+                        En plan Dimensiones encontrara:<br><br>
+                        * 4 Paracaidismo<br>
+                        * Flyboarder Experience.<br>
+                        * Caida libre<br>
+                    </p>
+                    <h1 class="botonSalir" id="salir8">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp9">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/jardin4.jpg" alt="Paquete Ubuntu">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">Ubuntu</h1>
+                    <p class="popUpCaracteristicas">
+                        Una locura total , los mejores 4 días extremos que podras pasar.<br><br>
+                        En plan Ubuntu encontrara:<br><br>
+                        * Ilumitw-pol.<br>
+                        * Rafting.<br>
+                        * Interactuar con la Kultura Ubuntu Nation que
+                        se encuentra haciendo su recorrido en wonderland y
+                        abre sus puertas para nuestros clientes<br>
+                    </p>
+                    <h1 class="botonSalir" id="salir9">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp10">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/jardin5.jpg" alt="Paquete Zulu">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">Zulu</h1>
+                    <p class="popUpCaracteristicas">
+                        Un dia entero con la Kultura Zulu practicando sus actividades matutinas
+                        desde la parte mas natural y pacifica.<br><br>
+                        En plan Zulu encontrara:<br><br>
+                        * Recorrido silen-creep<br>
+                        * Ecoturismo live.<br><br>
+                        Todas las actividades sera guiadas por un natuvo ZULU
+
+                    </p>
+                    <h1 class="botonSalir" id="salir10">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp11">
+            <div class="popUp">
+                <img class="popUpImagen" src="multimedia/paisaje6.jpg" alt="Paquete Baha-í">
+                <div class="popUpInformacion">
+                    <h1 class="popUpTitulo">Baha-í</h1>
+                    <p class="popUpCaracteristicas">
+                        En wonderland todo es un mundo diferente por eso hemos invitado
+                        a grandes profetas Bahaí para mostrarnos todo acerca de
+                        sus culturas y tradiciones.<br><br>
+                        En plan Baha-í encontrara:<br><br>
+                        * Acampados playa (Baha-í)<br>
+                        * Recorrido Silent <br>
+                    </p>
+                    <h1 class="botonSalir" id="salir11">Salir</h1>
+                    <h1 class="botonComprar comprar">Comprar</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUpComprar">
+            <div class="popUp">
+                <table>
+                    <tr class="tabla1">
+                        <th>Plan</th>
+                        <th>Precio por persona</th>
+                        <th>Precio WONDER-FRIEND</th>
+                    </tr>
+                    <tr class="tabla2">
+                        <td>Classic</td>
+                        <td>$234.567</td>
+                        <td>$223.567</td>
+                    </tr>
+                    <tr class="tabla1">
+                        <td>Gold</td>
+                        <td>$434.567</td>
+                        <td>$410.567</td>
+                    </tr>
+                    <tr class="tabla2">
+                        <td>Platinum</td>
+                        <td>$734.5674</td>
+                        <td>$720.5674</td>
+                    </tr>
+                    <tr class="tabla1">
+                        <td>Signature</td>
+                        <td>$900.654</td>
+                        <td>$880.654</td>
+                    </tr>
+                    <tr class="tabla2">
+                        <td>Infinite</td>
+                        <td>$1'119.934</td>
+                        <td>$1'019.934</td>
+                    </tr>
+                    <tr class="tabla1">
+                        <td>Plus</td>
+                        <td>$1'534.567</td>
+                        <td>$1'234.567</td>
+                    </tr>
+
+
+                </table>
+                <h1 class="botonSalir2" id="salir12">Salir</h1>
+                <h1 class="botonComprar2" id="comprar2">Comprar</h1>
+
+            </div>
+        </div>
+
+        <div class="popUpEfecto desactivar" id="popUp90">
+            <div class="popUp1">
+                <form action="" class="cajaComprar">
+                    <h1 class="subtitulo1">Bienvenido A compras WONDERLAND</h1>
+                    <table class="tablaComprar">
+                        <tr>
+                            <td><label for="usuario" >Nombre: </label></td>
+                            <td><input type="text" id="usuario"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="documento">Documento de identidad: </label></td>
+                            <td><input type="text" id="documento"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="tarjeta">Numero de tarjeta: </label></td>
+                            <td><input type="text" id="tarjeta"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="plan">Plan a escojer: </label></td>
+                            <td><input type="text" id="plan"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="boletos">Cantidad de boletos</label></td>
+                            <td><input type="text" id="boletos"></td>
+                        </tr>
+                    </table>
+                </form>
+                <h1 class="botonSalir2" id="salir13">Salir</h1>
+                <h1 class="botonComprar2" id="comprar3">Comprar</h1>
+
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
